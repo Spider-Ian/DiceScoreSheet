@@ -10,8 +10,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
 public class MainViewCtrl {
@@ -51,11 +49,11 @@ public class MainViewCtrl {
 
     List<List<List>> masterList = new ArrayList<>();
 
-    List<Tab> tabList = new ArrayList<>();
+    List tabList = new ArrayList<>();
 
-    List<HBox> rowList = new ArrayList<>();
+    List rowList = new ArrayList<>();
 
-    List<Label> mathCellList = new ArrayList<>();
+    List mathCellList = new ArrayList<>();
 
     //Not used in masterList
     List<Button> buttonList = new ArrayList<>();
@@ -82,9 +80,9 @@ public class MainViewCtrl {
         });
 
         //I don't think this adds it right
-        masterList.add(Collections.singletonList(tabList));
-        masterList.add(Collections.singletonList(rowList));
-        masterList.add(Collections.singletonList(mathCellList));
+        masterList.add(tabList);
+        masterList.get(0).add(rowList);
+        masterList.get(0).get(0).add(mathCellList);
 
         buttonList.get(0).setOnAction(event1 -> {
             if (currentCell == mathCells) {
@@ -93,13 +91,13 @@ public class MainViewCtrl {
                 System.out.println("Current tab: " + currentTab + " " + "Current row: " + currentRow + " " + "Current cell: " + currentCell);
                 System.out.println("=============================================");
                 System.out.println("masterList.get(0)" + masterList.get(0) + " masterList.get(0).get(0)" + masterList.get(0).get(0) + " masterList.get(0).get(0).get(0)" + masterList.get(0).get(0).get(0));
-                mathCellList.get(currentCell).setText(buttonList.get(0).getText());
+                //mathCellList.get(currentCell).setText(buttonList.get(0).getText());
                 currentCell++;
             } else {
                 System.out.println("Current tab: " + currentTab + " " + "Current row: " + currentRow + " " + "Current cell: " + currentCell);
                 System.out.println("=============================================");
                 System.out.println("masterList.get(0)" + masterList.get(0) + " masterList.get(0).get(0)" + masterList.get(0).get(0) + " masterList.get(0).get(0).get(0)" + masterList.get(0).get(0).get(0));
-                mathCellList.get(currentCell).setText(buttonList.get(0).getText());
+                //mathCellList.get(currentCell).setText(buttonList.get(0).getText());
                 currentCell++;
             }
         });
@@ -108,11 +106,11 @@ public class MainViewCtrl {
                 currentRow++;
                 currentCell = 0;
                 System.out.println("Current tab: " + currentTab + " " + "Current row: " + currentRow + " " + "Current cell: " + currentCell);
-                mathCellList.get(currentCell).setText(buttonList.get(1).getText());
+                //mathCellList.get(currentCell).setText(buttonList.get(1).getText());
                 currentCell++;
             } else {
                 System.out.println("Current tab: " + currentTab + " " + "Current row: " + currentRow + " " + "Current cell: " + currentCell);
-                mathCellList.get(currentCell).setText(buttonList.get(1).getText());
+                //mathCellList.get(currentCell).setText(buttonList.get(1).getText());
                 currentCell++;
             }
         });
@@ -121,11 +119,11 @@ public class MainViewCtrl {
                 currentRow++;
                 currentCell = 0;
                 System.out.println("Current tab: " + currentTab + " " + "Current row: " + currentRow + " " + "Current cell: " + currentCell);
-                mathCellList.get(currentCell).setText(buttonList.get(2).getText());
+                //mathCellList.get(currentCell).setText(buttonList.get(2).getText());
                 currentCell++;
             } else {
                 System.out.println("Current tab: " + currentTab + " " + "Current row: " + currentRow + " " + "Current cell: " + currentCell);
-                mathCellList.get(currentCell).setText(buttonList.get(2).getText());
+                //mathCellList.get(currentCell).setText(buttonList.get(2).getText());
                 currentCell++;
             }
         });
@@ -134,11 +132,11 @@ public class MainViewCtrl {
                 currentRow++;
                 currentCell = 0;
                 System.out.println("Current tab: " + currentTab + " " + "Current row: " + currentRow + " " + "Current cell: " + currentCell);
-                mathCellList.get(currentCell).setText(buttonList.get(3).getText());
+                //mathCellList.get(currentCell).setText(buttonList.get(3).getText());
                 currentCell++;
             } else {
                 System.out.println("Current tab: " + currentTab + " " + "Current row: " + currentRow + " " + "Current cell: " + currentCell);
-                mathCellList.get(currentCell).setText(buttonList.get(3).getText());
+                //mathCellList.get(currentCell).setText(buttonList.get(3).getText());
                 currentCell++;
             }
         });
@@ -147,11 +145,11 @@ public class MainViewCtrl {
                 currentRow++;
                 currentCell = 0;
                 System.out.println("Current tab: " + currentTab + " " + "Current row: " + currentRow + " " + "Current cell: " + currentCell);
-                mathCellList.get(currentCell).setText(buttonList.get(4).getText());
+                //mathCellList.get(currentCell).setText(buttonList.get(4).getText());
                 currentCell++;
             } else {
                 System.out.println("Current tab: " + currentTab + " " + "Current row: " + currentRow + " " + "Current cell: " + currentCell);
-                mathCellList.get(currentCell).setText(buttonList.get(4).getText());
+                //mathCellList.get(currentCell).setText(buttonList.get(4).getText());
                 currentCell++;
             }
         });
@@ -160,11 +158,11 @@ public class MainViewCtrl {
                 currentRow++;
                 currentCell = 0;
                 System.out.println("Current tab: " + currentTab + " " + "Current row: " + currentRow + " " + "Current cell: " + currentCell);
-                mathCellList.get(currentCell).setText(buttonList.get(5).getText());
+                //mathCellList.get(currentCell).setText(buttonList.get(5).getText());
                 currentCell++;
             } else {
                 System.out.println("Current tab: " + currentTab + " " + "Current row: " + currentRow + " " + "Current cell: " + currentCell);
-                mathCellList.get(currentCell).setText(buttonList.get(5).getText());
+                //mathCellList.get(currentCell).setText(buttonList.get(5).getText());
                 currentCell++;
             }
         });
